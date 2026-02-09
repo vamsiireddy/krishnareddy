@@ -1,129 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CI/CD Project | KAVURU Vamsi Krishna Reddy</title>
+<meta charset="UTF-8">
+<title>Flowers by Vamsi Krishna Reddy</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            color: #ffffff;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #1d2671, #c33764);
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
+    }
 
-        header {
-            background-color: #0b1c2d;
-            padding: 25px;
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            color: #ffd700;
-        }
+    h1 {
+        margin-top: 30px;
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
 
-        header span {
-            display: block;
-            font-size: 16px;
-            font-weight: normal;
-            color: #dcdcdc;
-            margin-top: 5px;
-        }
+    h2 {
+        margin-bottom: 40px;
+        font-weight: normal;
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+    .garden {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        padding-bottom: 60px;
+    }
 
-        .card {
-            background-color: #ffffff;
-            color: #333;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-        }
+    .flower {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        animation: float 4s ease-in-out infinite;
+    }
 
-        .card h2 {
-            color: #203a43;
-            border-left: 5px solid #2c5364;
-            padding-left: 10px;
-        }
+    .petal {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: 35px;
+        left: 35px;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    .p1 { transform: rotate(0deg) translate(40px); }
+    .p2 { transform: rotate(60deg) translate(40px); }
+    .p3 { transform: rotate(120deg) translate(40px); }
+    .p4 { transform: rotate(180deg) translate(40px); }
+    .p5 { transform: rotate(240deg) translate(40px); }
+    .p6 { transform: rotate(300deg) translate(40px); }
 
-        ul li {
-            margin: 8px 0;
-        }
+    .center {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        background: yellow;
+        border-radius: 50%;
+        top: 42px;
+        left: 42px;
+        box-shadow: 0 0 10px rgba(255,255,0,0.8);
+    }
 
-        .pipeline {
-            margin-top: 20px;
-            padding: 15px;
-            background: linear-gradient(to right, #ff9800, #ff5722);
-            color: white;
-            text-align: center;
-            font-weight: bold;
-            border-radius: 8px;
-        }
+    /* Flower Colors */
+    .pink .petal { background: #ff5fa2; }
+    .blue .petal { background: #4facfe; }
+    .orange .petal { background: #ff9f43; }
+    .purple .petal { background: #a55eea; }
+    .green .petal { background: #2ecc71; }
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #0b1c2d;
-            font-size: 14px;
-            color: #cccccc;
-        }
-    </style>
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0); }
+    }
+
+    footer {
+        margin-top: 20px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+</style>
 </head>
 
 <body>
 
-<header>
-    CI/CD Demo Application
-    <span>Developed by Vamsi Krishna Reddy</span>
-</header>
+<h1>🌸 Flower Garden 🌼</h1>
+<h2>Created by <b>Vamsi Krishna Reddy</b></h2>
 
-<div class="container">
+<div class="garden">
 
-    <div class="card">
-        <h2>About This Project</h2>
-        <p>
-            This project demonstrates a complete CI/CD pipeline where code changes
-            pushed to GitHub automatically trigger Jenkins, build the project using
-            Maven, and deploy it to Apache Tomcat.
-        </p>
-
-        <div class="pipeline">
-            Git Push → Jenkins Build → Maven Package → Tomcat Deploy
-        </div>
+    <div class="flower pink">
+        <div class="petal p1"></div>
+        <div class="petal p2"></div>
+        <div class="petal p3"></div>
+        <div class="petal p4"></div>
+        <div class="petal p5"></div>
+        <div class="petal p6"></div>
+        <div class="center"></div>
     </div>
 
-    <div class="card">
-        <h2>Technologies Used</h2>
-        <ul>
-            <li>Git & GitHub – Source Code Management</li>
-            <li>Jenkins – Continuous Integration</li>
-            <li>Apache Maven – Build Automation</li>
-            <li>Apache Tomcat – Application Deployment</li>
-            <li>Java 17 – Application Runtime</li>
-            <li>AWS EC2 – Hosting Environment</li>
-        </ul>
+    <div class="flower blue">
+        <div class="petal p1"></div>
+        <div class="petal p2"></div>
+        <div class="petal p3"></div>
+        <div class="petal p4"></div>
+        <div class="petal p5"></div>
+        <div class="petal p6"></div>
+        <div class="center"></div>
     </div>
 
-    <div class="card">
-        <h2>CI/CD Objective</h2>
-        <p>
-            The goal of this project is to automate the build and deployment process,
-            reduce manual intervention, and ensure faster and reliable application delivery.
-        </p>
+    <div class="flower orange">
+        <div class="petal p1"></div>
+        <div class="petal p2"></div>
+        <div class="petal p3"></div>
+        <div class="petal p4"></div>
+        <div class="petal p5"></div>
+        <div class="petal p6"></div>
+        <div class="center"></div>
+    </div>
+
+    <div class="flower purple">
+        <div class="petal p1"></div>
+        <div class="petal p2"></div>
+        <div class="petal p3"></div>
+        <div class="petal p4"></div>
+        <div class="petal p5"></div>
+        <div class="petal p6"></div>
+        <div class="center"></div>
+    </div>
+
+    <div class="flower green">
+        <div class="petal p1"></div>
+        <div class="petal p2"></div>
+        <div class="petal p3"></div>
+        <div class="petal p4"></div>
+        <div class="petal p5"></div>
+        <div class="petal p6"></div>
+        <div class="center"></div>
     </div>
 
 </div>
 
 <footer>
-    © 2026 | Vamsi Krishna Reddy | CI/CD Practice Project
+🌈 CI/CD Practice Project • Deployed via Jenkins & Tomcat
 </footer>
 
 </body>
