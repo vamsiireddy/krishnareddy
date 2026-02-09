@@ -2,63 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CI/CD Practice App</title>
+    <title>CI/CD Project | Vamsi Krishna Reddy</title>
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #1d2671, #c33764);
-            color: white;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
         }
 
         header {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 20px;
+            background-color: #0b1c2d;
+            padding: 25px;
             text-align: center;
-            font-size: 28px;
+            font-size: 30px;
             font-weight: bold;
+            color: #ffd700;
+        }
+
+        header span {
+            display: block;
+            font-size: 16px;
+            font-weight: normal;
+            color: #dcdcdc;
+            margin-top: 5px;
         }
 
         .container {
-            padding: 30px;
-            max-width: 900px;
-            margin: auto;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
         }
 
         .card {
-            background: white;
+            background-color: #ffffff;
             color: #333;
-            padding: 25px;
-            margin-bottom: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
         }
 
         .card h2 {
-            color: #c33764;
+            color: #203a43;
+            border-left: 5px solid #2c5364;
+            padding-left: 10px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #1d2671;
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 8px 0;
+        }
+
+        .pipeline {
+            margin-top: 20px;
+            padding: 15px;
+            background: linear-gradient(to right, #ff9800, #ff5722);
             color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-top: 10px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #c33764;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 8px;
         }
 
         footer {
             text-align: center;
             padding: 15px;
-            background: rgba(0,0,0,0.4);
+            background-color: #0b1c2d;
             font-size: 14px;
+            color: #cccccc;
         }
     </style>
 </head>
@@ -66,14 +81,51 @@
 <body>
 
 <header>
-    🚀 CI/CD Practice Application
+    CI/CD Demo Application
+    <span>Developed by Vamsi Krishna Reddy</span>
 </header>
 
 <div class="container">
 
     <div class="card">
-        <h2>Welcome</h2>
+        <h2>About This Project</h2>
         <p>
-            This application is deployed using
-            <b>Git, Jenkins, Maven, and Tomca
+            This project demonstrates a complete CI/CD pipeline where code changes
+            pushed to GitHub automatically trigger Jenkins, build the project using
+            Maven, and deploy it to Apache Tomcat.
+        </p>
+
+        <div class="pipeline">
+            Git Push → Jenkins Build → Maven Package → Tomcat Deploy
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Technologies Used</h2>
+        <ul>
+            <li>Git & GitHub – Source Code Management</li>
+            <li>Jenkins – Continuous Integration</li>
+            <li>Apache Maven – Build Automation</li>
+            <li>Apache Tomcat – Application Deployment</li>
+            <li>Java 17 – Application Runtime</li>
+            <li>AWS EC2 – Hosting Environment</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>CI/CD Objective</h2>
+        <p>
+            The goal of this project is to automate the build and deployment process,
+            reduce manual intervention, and ensure faster and reliable application delivery.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 | Vamsi Krishna Reddy | CI/CD Practice Project
+</footer>
+
+</body>
+</html>
 
